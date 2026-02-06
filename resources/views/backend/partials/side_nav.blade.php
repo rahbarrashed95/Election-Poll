@@ -80,70 +80,41 @@
                   </a>
                 </li>        
     
+             
                 <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#manage_area" aria-expanded="false" aria-controls="manage_area">
-                    <span class="menu-title">Manage Area</span>
+                  <a class="nav-link" data-bs-toggle="collapse" href="#manage_seats" aria-expanded="false" aria-controls="manage_seats">
+                    <span class="menu-title">Manage Seats</span>
                     <i class="menu-arrow"></i>
                     <i class="mdi mdi-area menu-icon"></i>
                     <i class="fa fa-area-chart" aria-hidden="true"></i>
     
                   </a>
-                  <div class="collapse" id="manage_area">
+                  <div class="collapse" id="manage_seats">
                     <ul class="nav flex-column sub-menu">
                       <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.areas.index')}}"> Area List </a>
-                        <a class="nav-link" href="{{ route('admin.cities.index')}}"> City List </a>
+                        <a class="nav-link" href="{{ route('admin.seats.index')}}"> Seat List </a>
                       </li>                                       
                     </ul>
                   </div>
                 </li>
-    
+
                 <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#cat_sub_cat" aria-expanded="false" aria-controls="cat_sub_cat">
-                    <span class="menu-title">Manage Category</span>
+                  <a class="nav-link" data-bs-toggle="collapse" href="#manage_candidates" aria-expanded="false" aria-controls="manage_candidates">
+                    <span class="menu-title">Manage Candidates</span>
                     <i class="menu-arrow"></i>
-                    <i class="fa fa-list-alt" aria-hidden="true"></i>
-                  </a>
-                  <div class="collapse" id="cat_sub_cat">
-                    <ul class="nav flex-column sub-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.categories.index')}}"> Category List </a>
-                        <a class="nav-link" href="{{ route('admin.sub-categories.index')}}"> Sub Category List </a>
-                      </li>                                       
-                    </ul>
-                  </div>
-                </li>
-                
-                 <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#amenity_property" aria-expanded="false" aria-controls="amenity_property">
-                    <span class="menu-title">Manage Your Amenity</span>
-                    <i class="menu-arrow"></i>
-                    <i class="fa fa-building menu-icon"></i>
-                  </a>
-                  <div class="collapse" id="amenity_property">
-                    <ul class="nav flex-column sub-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.amenity-property.index')}}"> Amenity List </a>
-                      </li>                                       
-                    </ul>
-                  </div>
-                </li>
-                
-                 <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#property" aria-expanded="false" aria-controls="property">
-                    <span class="menu-title">Manage Your Property</span>
-                    <i class="menu-arrow"></i>
-                    <i class="fa fa-building menu-icon"></i>
-                  </a>
-                  <div class="collapse" id="property">
-                    <ul class="nav flex-column sub-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.property.index')}}"> Property List </a>
-                      </li>                                       
-                    </ul>
-                  </div>
-                </li>
+                    <i class="mdi mdi-area menu-icon"></i>
+                    <i class="fa fa-area-chart" aria-hidden="true"></i>
     
+                  </a>
+                  <div class="collapse" id="manage_candidates">
+                    <ul class="nav flex-column sub-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.candidates.index')}}"> Candidate List </a>
+                      </li>                                       
+                    </ul>
+                  </div>
+                </li>
+{{--     
                 <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#social" aria-expanded="false" aria-controls="social">
                     <span class="menu-title">Manage Social Links</span>
@@ -158,116 +129,14 @@
                     </ul>
                   </div>
                 </li>
-    
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#work_step" aria-expanded="false" aria-controls="work_step">
-                    <span class="menu-title">How It Works</span>
-                    <i class="menu-arrow"></i>
-                    <i class="fa fa-lightbulb-o menu-icon"></i>
-                  </a>
-                  <div class="collapse" id="work_step">
-                    <ul class="nav flex-column sub-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.work-step.index')}}"> Step List </a>
-                      </li>                                       
-                    </ul>
-                  </div>
-                </li>
-                <!--<li class="nav-item">-->
-                <!--  <a class="nav-link" data-bs-toggle="collapse" href="#property" aria-expanded="false" aria-controls="property">-->
-                <!--    <span class="menu-title">Manage Property</span>-->
-                <!--    <i class="menu-arrow"></i>-->
-                <!--    <i class="fa fa-building menu-icon"></i>-->
-                <!--  </a>-->
-                <!--  <div class="collapse" id="property">-->
-                <!--    <ul class="nav flex-column sub-menu">-->
-                <!--      <li class="nav-item">-->
-                <!--        <a class="nav-link" href="{{ route('admin.property.index')}}"> Property List </a>-->
-                <!--      </li>                                       -->
-                <!--    </ul>-->
-                <!--  </div>-->
-                <!--</li>-->
-                <li class="nav-item">
+     --}}
+               
+                {{-- <li class="nav-item">
                   <a class="nav-link" href="{{ route('admin.agent_list') }}">
                     <span class="menu-title">Agent List</span>
                     <i class="mdi mdi-home menu-icon"></i>
                   </a>
-                </li> 
-    
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#testimonial" aria-expanded="false" aria-controls="testimonial">
-                    <span class="menu-title">Manage Testimonial</span>
-                    <i class="menu-arrow"></i>
-                    <i class="fa fa-comments menu-icon"></i>
-                  </a>
-                  <div class="collapse" id="testimonial">
-                    <ul class="nav flex-column sub-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.testimonials.index')}}"> Testimonial List </a>
-                      </li>                                       
-                    </ul>
-                  </div>
-                </li>
-    
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#faq" aria-expanded="false" aria-controls="faq">
-                    <span class="menu-title">Manage Faq</span>
-                    <i class="menu-arrow"></i>
-                    <i class="fa fa-question-circle menu-icon"></i>
-                  </a>
-                  <div class="collapse" id="faq">
-                    <ul class="nav flex-column sub-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.faqs.index')}}"> Faq List </a>
-                      </li>                                       
-                    </ul>
-                  </div>
-                </li>
-    
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#package" aria-expanded="false" aria-controls="package">
-                    <span class="menu-title">Manage Package</span>
-                    <i class="menu-arrow"></i>
-                    <i class="fa fa-question-circle menu-icon"></i>
-                  </a>
-                  <div class="collapse" id="package">
-                    <ul class="nav flex-column sub-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.packages.index')}}"> Package List </a>
-                      </li>                                       
-                    </ul>
-                  </div>
-                </li>
-    
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#page" aria-expanded="false" aria-controls="page">
-                    <span class="menu-title">Manage Page</span>
-                    <i class="menu-arrow"></i>
-                    <i class="fa fa-question-circle menu-icon"></i>
-                  </a>
-                  <div class="collapse" id="page">
-                    <ul class="nav flex-column sub-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.pages.index')}}"> Page List </a>
-                      </li>                                       
-                    </ul>
-                  </div>
-                </li>
-                
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#blog" aria-expanded="false" aria-controls="blog">
-                    <span class="menu-title">Manage Blog</span>
-                    <i class="menu-arrow"></i>
-                    <i class="fa fa-question-circle menu-icon"></i>
-                  </a>
-                  <div class="collapse" id="blog">
-                    <ul class="nav flex-column sub-menu">
-                      <li class="nav-item">
-                        <a class="nav-link" href="{{ route('admin.blogs.index')}}"> Blog List </a>
-                      </li>                                       
-                    </ul>
-                  </div>
-                </li>
+                </li>  --}}
     
                 <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">

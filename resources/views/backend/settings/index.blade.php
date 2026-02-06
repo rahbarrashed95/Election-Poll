@@ -74,27 +74,6 @@
                             </div>                           
                         </div>
                         
-                        <hr/>
-                        
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email">{{ __('Home Seo Title') }}</label>
-                                <input type="text" id="seo_title" class="form-control" name="seo_title" placeholder="Seo Title" value="{{ $item?$item->seo_title:'' }}">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email">{{ __('Home Seo Description') }}</label>
-                                <input type="text" id="seo_description" class="form-control" name="seo_description" placeholder="Seo Description" value="{{ $item?$item->seo_description:'' }}">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email">{{ __('Keyword') }}</label>
-                                <input type="text" id="keyword" class="form-control" name="keyword" placeholder="Enter Keword by comma separate" value="{{ $item?$item->keyword:'' }}">
-                            </div>
-                        </div>
-                        
                     </div>
                     <br>                   
                     <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>                    

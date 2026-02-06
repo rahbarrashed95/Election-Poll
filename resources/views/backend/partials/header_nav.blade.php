@@ -1,10 +1,12 @@
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
           <a class="navbar-brand brand-logo" href="{{ route('admin.dashboard') }}">
-              <img src="{{ getImage('settings',getInfo('logo'))}}" alt="Property" />
+              {{-- <img src="{{ getImage('settings',getInfo('logo'))}}" alt="Property" /> --}}
+              <b>Polling System</b>
           </a>
           <a class="navbar-brand brand-logo-mini" href="{{ route('admin.dashboard') }}">
-              <img src="{{ getImage('settings',getInfo('logo'))}}" alt="logo" />
+              {{-- <img src="{{ getImage('settings',getInfo('logo'))}}" alt="logo" /> --}}
+              <b>Polling System</b>
           </a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -21,7 +23,7 @@
               <a 
               style="text-decoration: none;color: #000;"
               target="_blank"
-              href="{{ route('front.home') }}">Visit Website</a>
+              href="">Visit Website</a>
             </li> 
             <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">

@@ -41,7 +41,7 @@
 			<div class="container">
 				<!-- Header -->
 				<header class="log-header">
-					<a href="{{ route('front.home') }}"><img class="img-fluid logo-dark" src="{{ asset('public/frontend/assets/img/logo.svg')}}" alt="Logo"></a>
+					<a href=""><img class="img-fluid logo-dark" src="{{ asset('public/frontend/assets/img/logo.svg')}}" alt="Logo"></a>
 				</header>
 				<!-- /Header -->
 

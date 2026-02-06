@@ -91,7 +91,11 @@ Route::get('/robots.txt', function () {
 
 Route::group(['as'=>'front.'], function() {
     Route::controller(FrontHomeController::class)->group(function(){
-        Route::get('/', 'index')->name('home');
+        
+        Route::get('/', function () {
+            return redirect()->route('login');
+        });
+        
         Route::get('about/page','about_page')->name('about_page');
         Route::post('make/appointment','make_appointment')->name('make.appointment');
         Route::post('blog/comment','blog_comment')->name('blog-comment');
