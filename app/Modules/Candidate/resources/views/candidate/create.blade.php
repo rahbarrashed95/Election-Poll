@@ -26,13 +26,6 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="marka">Marka</label>                               
-                                <input type="text" id="marka" class="form-control" name="marka" placeholder="Marka..." value="">
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="form-group">
                                 <label for="party">Party</label>                               
                                 <input type="text" id="party" class="form-control" name="party" placeholder="Party..." value="">
                             </div>
@@ -65,6 +58,20 @@
                                 <select class="form-select form-select-sm select2" id="seat_id" name="seat_id">
                                                                        
                                 </select> 
+                            </div>
+                        </div> 
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="image">Image</label>                               
+                                <input type="file" id="image" class="form-control" name="image">
+                            </div>
+                        </div> 
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="marka_image">Marka Image</label>                               
+                                <input type="file" id="marka_image" class="form-control" name="marka_image">
                             </div>
                         </div> 
 

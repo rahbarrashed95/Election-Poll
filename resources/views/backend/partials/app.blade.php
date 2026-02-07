@@ -76,6 +76,7 @@
     </div>
 
     <div class="modal fade" id="common_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+    <div class="modal fade" id="common_modal_edit2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
         <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
     
@@ -133,8 +134,6 @@
         sessionStorage.removeItem('toastr_message');
         sessionStorage.removeItem('toastr_type');
     }
-    
-    
 
       $(document).on('click','.btn_modal', function(e){ 
           e.preventDefault();

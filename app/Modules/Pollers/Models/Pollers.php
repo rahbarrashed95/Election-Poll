@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Modules\Candidate\Models;
+namespace App\Modules\Pollers\Models;
 
 use App\Modules\Poll\Models\Poll;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Candidate extends Model
+class Pollers extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    const ACTIVE = 1;
-    const INACTIVE = 0;
 
-    public function polls()
+    public function poll()
     {
-        return $this->hasMany(Poll::class);
+        return $this->hasOne(Poll::class);
     }
+
+
 }

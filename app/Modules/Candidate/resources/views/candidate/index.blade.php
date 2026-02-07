@@ -69,16 +69,99 @@
   </div>
 </div>   
 
+<div class="modal fade" id="common_modal_edit" tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <!-- ajax content will come here -->
+    </div>
+  </div>
+</div>
+
+
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.ckeditor.com/4.12.1/full/ckeditor.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){     
       get_data();
     });
 
+$(document).on('click','.btn_edit', function(e){ 
+    e.preventDefault();
+
+    var url = $(this).attr('href');
+
+    $.get(url, function(res){
+
+        $('#common_modal_edit .modal-content').html(res);
+        $('#common_modal_edit').modal('show');
+
+        $('#common_modal_edit').one('shown.bs.modal', function () {
+
+            let division_id  = $('#division_id').val();
+            let district_id  = $('#district_id').data('selected'); 
+            let seat_id     = $('#seat_id').data('selected');
+            // ⬆️ blade থেকে পাঠাবে
+
+            if (division_id) {
+                loadDistricts(division_id, district_id, seat_id);
+            }
+        });
+
+    });
+});
+
+function loadDistricts(division_id, selected_district_id = null, selected_seat_id = null) {
+    $.ajax({
+        url: "{{ route('admin.candidates.getByDivision') }}",
+        method: 'GET',
+        data: { division_id },
+        success: function(res){
+            if(res.status){
+                let options = '<option>Please Select</option>';
+
+                res.data.forEach(function(item){
+                    let selected = selected_district_id == item.id ? 'selected' : '';
+                    options += `<option value="${item.id}" ${selected}>${item.name}</option>`;
+                });
+
+                let districtSelect = $('#common_modal_edit').find('#district_id');
+                districtSelect.html(options);
+
+                // 🔥 auto load seats if editing
+                if (selected_district_id) {
+                    loadSeats(selected_district_id, selected_seat_id);
+                }
+            }
+        }
+    });
+}
+
+function loadSeats(district_id, selected_seat_id = null) {
+    $.ajax({
+        url: "{{ route('admin.candidates.getSeats') }}",
+        method: 'GET',
+        data: { district_id },
+        success: function(res){
+            if(res.status){
+                let options = '<option>Please Select</option>';
+
+                res.data.forEach(function(item){
+                    let selected = selected_seat_id == item.id ? 'selected' : '';
+                    options += `<option value="${item.id}" ${selected}>${item.name}</option>`;
+                });
+
+                $('#common_modal_edit').find('#seat_id').html(options);
+            }
+        }
+    });
+}
+
     $(document).on('change', 'select#division_id',
       function(){
         let division_id = $(this).val();
+        $('select#seat_id').html('');
         $.ajax({
           url: "{{ route('admin.candidates.getByDivision') }}",
           method: 'GET',
